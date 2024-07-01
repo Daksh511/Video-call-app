@@ -4,8 +4,9 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('https//:video-call-app-production.up.railway.app');
 
+const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+const socket = io(`${protocol}//web-production-ae9f.up.railway.app`, { transport: ['polling'] });
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
