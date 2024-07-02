@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
 	cors: {
-		origin: "https://video-call-app-production.up.railway.app/",
+		origin: "https://daksh511.github.io/Videocall-Socket-io/",
 		methods: [ "GET", "POST" ]
 	}
 });
